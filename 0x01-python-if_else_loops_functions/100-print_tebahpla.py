@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_tebahpla():
     """Print the ASCII alphabet in reverse order with alternating cases."""
     for i in range(25, -1, -1):  # Start from 25 (z) to 0 (a)
