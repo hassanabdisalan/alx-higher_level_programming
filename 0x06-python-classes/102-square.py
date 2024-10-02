@@ -60,5 +60,6 @@ class Square:
         if self.size != other.size:
             return True
         else:
-            return False
+           return False
+
         

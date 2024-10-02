@@ -1,0 +1,8 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintEnabled": false,   // Disable pylint if needed
+    "python.linting.pycodestyleArgs": [
+        "--max-line-length=79"               // Set line length as per PEP8
+    ]
+}
