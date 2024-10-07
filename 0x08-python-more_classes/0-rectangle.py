@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This is 0-rectangle module
-Funtions and classes:
+Funtions and classes
 class Rectangle()
 """
 
