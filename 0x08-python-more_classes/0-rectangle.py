@@ -2,7 +2,7 @@
 """
 This is 0-rectangle module
 Funtions and classes:
-	class Rectanle()
+class Rectanle()
 """
 
 
