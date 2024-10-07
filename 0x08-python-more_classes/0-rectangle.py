@@ -2,10 +2,10 @@
 """
 This is 0-rectangle module
 Funtions and classes:
-class Rectanle()
+class Rectangle()
 """
 
 
 class Rectangle():
-
+	"""Empty represenation of a rectangle"""
 	pass
