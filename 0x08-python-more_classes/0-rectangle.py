@@ -7,5 +7,5 @@ class Rectanle()
 
 
 class Rectangle():
-	"""Reperesenting a rectangle"""
+
 	pass
