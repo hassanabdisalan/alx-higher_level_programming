@@ -4,17 +4,6 @@ Contains the lookup function
 """
 
 
-def lookup(object):
-	"""Returns the list of available attributes and methods of an object"""
-	return dir(object)
-
-
-
-
-
-
-
-
-
-
-
+def lookup(obj):
+    """returns a list of available attributes and methods of an object"""
+    return dir(obj)
