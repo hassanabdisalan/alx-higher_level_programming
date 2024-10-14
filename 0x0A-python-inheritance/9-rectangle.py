@@ -1,21 +1,38 @@
 #!/usr/bin/python3
-"""
-This is '11-square' module.
-Functions and Classes:
-    class Square
-"""
+
+""" Define a class named Rectangle """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-Rectangle = __import__('9-rectangle').Rectangle
+class Rectangle(BaseGeometry):
+    """
+    Representation of a class Rectangle that
+    inherits BaseGeometry class
+    """
 
+    def __init__(self, width, height):
+        """
+        Initialize a Rectangle
 
-class Square(Rectangle):
-    """represent a square"""
-    def __init__(self, size):
-        self.integer_validator("size", size)
-        super().__init__(size, size)
-        self.__size = size
+        Args:
+            width (int): width of the rect
+            height (int): height of the rect
+        """
+        super().integer_validator("width", width)
+        self.__width = width
+        super().integer_validator("height", height)
+        self.__height = height
+
+    def area(self):
+        """
+        Calculate the rectangle area
+        """
+        return self.__width * self.__height
 
     def __str__(self):
-        """string representation of a Square object"""
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        """
+        String representation of a rectangle
+        """
+        str_rect = "[" + str(self.__class__.__name__) + "] "
+        str_rect += str(self.__width) + "/" + str(self.__height)
+        return str_rect
