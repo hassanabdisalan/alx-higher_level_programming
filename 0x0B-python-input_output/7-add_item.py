@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""creating BaseGeometry class"""
+"""
+Script that adds all arguments to a Python list, and then saves them to a file
+"""
 
+from sys import argv
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
-class BaseGeometry:
-    """class BaseGeometry represented"""
+filename = "add_item.json"
 
-    def area(self):
-        """when it is not implemented"""
+try:
+    json_list = load_from_json_file(filename)
+except FileNotFoundError:
+    json_list = []
 
-        raise Exception("area() is not implemented")
+for arg in argv[1:]:
+    json_list.append(arg)
 
-    def integer_validator(self, name, value):
-        '''
-            Validating the integer
-        '''
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-        
+save_to_json_file(json_list, filename)
